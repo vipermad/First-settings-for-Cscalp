@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: com.example.gui.Application
+Class-Path: openjfx-17.0.1_windows-x64_bin-sdk.zip gson-2.8.9.jar javafx
+ -swt.jar javafx.base.jar javafx.controls.jar javafx.fxml.jar javafx.gra
+ phics.jar javafx.media.jar javafx.swing.jar javafx.web.jar javafx-swt.j
+ ar javafx.web.jar javafx.base.jar javafx.fxml.jar javafx.media.jar java
+ fx.swing.jar javafx.controls.jar javafx.graphics.jar
+

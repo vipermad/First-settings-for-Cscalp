@@ -1,0 +1,1 @@
+"%JAVA17%/bin/javaw" -p "%~dp0lib;%~dp0;" -m archive/com.example.gui.Application
