@@ -1,6 +1,6 @@
 package logic;
 
-import com.example.gui.Controller;
+import app.Controller;
 import javafx.scene.control.Alert;
 
 import java.io.IOException;
