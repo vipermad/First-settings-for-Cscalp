@@ -2,10 +2,7 @@ package app;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,6 +11,15 @@ import java.util.ResourceBundle;
 
 
 public class Controller implements Initializable {
+    @FXML
+    private TextField Path;
+    private static String path = "C:\\Program Files (x86)\\FSR Launcher\\SubApps\\CScalp\\Data\\MVS\\";
+    @FXML
+    private TextField PublicAPIKeySpot;
+    private static String public_api_key_spot;
+    @FXML
+    private TextField PublicApiKeyFutures;
+    private static String public_api_key_futures;
     @FXML
     private Spinner<Integer> First_WorkAmount;
     private static int first_work_amount = 1000;
@@ -162,6 +168,15 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        PublicAPIKeySpot.setText("Первые 5 символов с учетом регистра");
+        PublicAPIKeySpot.textProperty().addListener((observableValue, s, t1) -> public_api_key_spot = PublicAPIKeySpot.getText());
+
+        PublicApiKeyFutures.setText("Первые 5 символов с учетом регистра");
+        PublicApiKeyFutures.textProperty().addListener((observableValue, s, t1) -> public_api_key_futures = PublicApiKeyFutures.getText());
+
+        Path.setText("C:\\Program Files (x86)\\FSR Launcher\\SubApps\\CScalp\\Data\\MVS\\");
+        Path.textProperty().addListener((observableValue, s, t1) -> path = Path.getText());
 
         SpinnerValueFactory<Integer> firstWorkAmount = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 999999999);
         firstWorkAmount.setValue(1000);
@@ -553,6 +568,12 @@ public class Controller implements Initializable {
             show_additive_cursor = "False";
         }
     }
+
+    public static String getPublic_api_key_spot(){return public_api_key_spot;}
+
+    public static String getPublic_api_key_futures(){return public_api_key_futures;}
+
+    public static String getPath(){return path;}
 
     public static int getFirst_work_amount() {
         return first_work_amount;

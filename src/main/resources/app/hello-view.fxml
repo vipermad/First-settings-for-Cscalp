@@ -38,15 +38,19 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="751.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+<VBox prefHeight="750.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="690.0" prefWidth="407.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="755.0" prefWidth="463.0" VBox.vgrow="ALWAYS">
             <children>
-                <TabPane layoutX="6.0" layoutY="4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="682.0" prefWidth="401.0" tabClosingPolicy="UNAVAILABLE">
+                <TabPane layoutX="6.0" layoutY="3.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="683.0" prefWidth="432.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                         <Tab text="Торговля">
                             <content>
@@ -79,7 +83,7 @@
                                         <Spinner fx:id="StopLimitOrdersThrowRange" layoutX="241.0" layoutY="169.0" />
                                         <Spinner fx:id="StopLoss_Steps" layoutX="241.0" layoutY="196.0" />
                                         <Spinner fx:id="TakeProfit_Steps" layoutX="241.0" layoutY="223.0" />
-                                        <CheckBox fx:id="PlaySoundOnTrade" layoutX="308.0" layoutY="333.0" mnemonicParsing="false" onAction="#changePlaySoundOnTrade"/>
+                                        <CheckBox fx:id="PlaySoundOnTrade" layoutX="308.0" layoutY="333.0" mnemonicParsing="false" onAction="#changePlaySoundOnTrade" />
                                     </children>
                                 </AnchorPane>
                             </content>
@@ -130,11 +134,11 @@
                                         <Spinner fx:id="IcebergSuspectedFrom" layoutX="242.0" layoutY="420.0" />
                                         <Spinner fx:id="IcebergFactor" layoutX="242.0" layoutY="460.0" />
                                         <CheckBox fx:id="PlayBigAmount" layoutX="300.0" layoutY="187.0" mnemonicParsing="false" onAction="#changePlayBigAmount" />
-                                        <CheckBox fx:id="PlayHugeAmount" layoutX="300.0" layoutY="231.0" mnemonicParsing="false" onAction="#changePlayHugeAmount"/>
-                                        <CheckBox fx:id="PlayIcebergOrders" layoutX="300.0" layoutY="505.0" mnemonicParsing="false" onAction="#changePlayIcebergOrders"/>
-                                        <CheckBox fx:id="FindIcebergOrders" layoutX="300.0" layoutY="555.0" mnemonicParsing="false" onAction="#changeFindIcebergOrders"/>
-                                        <CheckBox fx:id="AutoScroll" layoutX="300.0" layoutY="590.0" mnemonicParsing="false" onAction="#changeAutoScroll"/>
-                                        <CheckBox fx:id="PlayUserSignalPriceLevels" layoutX="300.0" layoutY="625.0" mnemonicParsing="false" onAction="#changePlayUserSignalPriceLevels"/>
+                                        <CheckBox fx:id="PlayHugeAmount" layoutX="300.0" layoutY="231.0" mnemonicParsing="false" onAction="#changePlayHugeAmount" />
+                                        <CheckBox fx:id="PlayIcebergOrders" layoutX="300.0" layoutY="505.0" mnemonicParsing="false" onAction="#changePlayIcebergOrders" />
+                                        <CheckBox fx:id="FindIcebergOrders" layoutX="300.0" layoutY="555.0" mnemonicParsing="false" onAction="#changeFindIcebergOrders" />
+                                        <CheckBox fx:id="AutoScroll" layoutX="300.0" layoutY="590.0" mnemonicParsing="false" onAction="#changeAutoScroll" />
+                                        <CheckBox fx:id="PlayUserSignalPriceLevels" layoutX="300.0" layoutY="625.0" mnemonicParsing="false" onAction="#changePlayUserSignalPriceLevels" />
                                     </children></AnchorPane>
                             </content>
                         </Tab>
@@ -157,8 +161,8 @@
                                         <Spinner fx:id="SumTicks_Period" layoutX="242.0" layoutY="84.0" />
                                         <Spinner fx:id="BigAmountTicks" layoutX="242.0" layoutY="119.0" />
                                         <Spinner fx:id="TicksWeight" layoutX="242.0" layoutY="214.0" />
-                                        <CheckBox fx:id="HideFilteredTicks" layoutX="308.0" layoutY="50.0" mnemonicParsing="false" onAction="#changeHideFilteredTicks"/>
-                                        <CheckBox fx:id="TicksPlayBigAmount" layoutX="309.0" layoutY="159.0" mnemonicParsing="false" onAction="#changeTicksPlayBigAmount"/>
+                                        <CheckBox fx:id="HideFilteredTicks" layoutX="308.0" layoutY="50.0" mnemonicParsing="false" onAction="#changeHideFilteredTicks" />
+                                        <CheckBox fx:id="TicksPlayBigAmount" layoutX="309.0" layoutY="159.0" mnemonicParsing="false" onAction="#changeTicksPlayBigAmount" />
                                     </children></AnchorPane>
                             </content>
                         </Tab>
@@ -175,7 +179,7 @@
                                         <ComboBox fx:id="ClusterStyleColor" layoutX="241.0" layoutY="118.0" prefHeight="25.0" prefWidth="149.0" />
                                         <ComboBox fx:id="TimeFrame" layoutX="241.0" layoutY="64.0" prefHeight="25.0" prefWidth="149.0" />
                                         <Spinner fx:id="ClusterFilledAt" layoutX="241.0" layoutY="10.0" />
-                                        <CheckBox fx:id="ShowClusterPanel" layoutX="308.0" layoutY="41.0" mnemonicParsing="false" onAction="#changeShowClusterPanel"/>
+                                        <CheckBox fx:id="ShowClusterPanel" layoutX="308.0" layoutY="41.0" mnemonicParsing="false" onAction="#changeShowClusterPanel" />
                                     </children></AnchorPane>
                             </content>
                         </Tab>
@@ -193,15 +197,32 @@
                                         <Text layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="анализа кластеров" AnchorPane.leftAnchor="28.0" />
                                         <Spinner fx:id="PriceAggregationFactor" layoutX="234.0" layoutY="10.0" />
                                         <Spinner fx:id="MaxAmountZeroDigits" layoutX="234.0" layoutY="56.0" />
-                                        <CheckBox fx:id="ReduceAmountThousands" layoutX="301.0" layoutY="103.0" mnemonicParsing="false" onAction="#changeReduceAmountThousands"/>
-                                        <CheckBox fx:id="ShowAdditiveCursor" layoutX="301.0" layoutY="142.0" mnemonicParsing="false" onAction="#changeShowAdditiveCursor"/>
+                                        <CheckBox fx:id="ReduceAmountThousands" layoutX="301.0" layoutY="103.0" mnemonicParsing="false" onAction="#changeReduceAmountThousands" />
+                                        <CheckBox fx:id="ShowAdditiveCursor" layoutX="301.0" layoutY="142.0" mnemonicParsing="false" onAction="#changeShowAdditiveCursor" />
                                     </children></AnchorPane>
                             </content>
                         </Tab>
+                  <Tab text="Сохранить настройки">
+                     <content>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="401.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Путь к папке MVS" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" />
+                              <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Public Key Spot" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" />
+                              <Text layoutX="14.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Первые 5 символов)" textAlignment="CENTER" />
+                              <Text layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Public Key Futures" textAlignment="CENTER" />
+                              <Text layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Первые 5 символов)" textAlignment="CENTER" />
+                              <TextField fx:id="Path" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="242.0" />
+                              <TextField fx:id="PublicAPIKeySpot" layoutX="144.0" layoutY="56.0" prefHeight="25.0" prefWidth="243.0" />
+                              <TextField fx:id="PublicApiKeyFutures" layoutX="144.0" layoutY="100.0" prefHeight="25.0" prefWidth="243.0" />
+                                  <Button fx:id="Apply" layoutX="343.0" layoutY="615.0" mnemonicParsing="false" onAction="#save" text="Применить" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
                     </tabs>
                 </TabPane>
-                <Button fx:id="Close" layoutX="331.0" layoutY="713.0" mnemonicParsing="false" onAction="#close" text="Закрыть" />
-                <Button fx:id="Apply" layoutX="242.0" layoutY="713.0" mnemonicParsing="false" onAction="#save" text="Применить"/>
+                <Button fx:id="Close" layoutX="366.0" layoutY="711.0" mnemonicParsing="false" onAction="#close" text="Закрыть" />
+            <Line endX="335.0" layoutX="107.0" layoutY="698.0" startX="-107.0" />
             </children>
         </AnchorPane>
     </children>
