@@ -102,31 +102,31 @@ public class Controller implements Initializable {
     private static String triggering_of_stop_orders = "По сделкам";
     @FXML
     private ComboBox<String> IsServerStopOrders;
-    private static String is_server_stop_orders = "В приложении";
+    private static String is_server_stop_orders = "False";
     @FXML
     private ComboBox<String> AveragingMethod;
-    private static String averaging_method = "От первой сделки";
+    private static String averaging_method = "FIFO";
     @FXML
     private ComboBox<String> ShowProfitType;
-    private static String show_profit_type = "Пункты";
+    private static String show_profit_type = "0";
     @FXML
     private ComboBox<String> Focus_TSpreadFTick;
-    private static String focus_t_spread = "По лучшим ценам";
+    private static String focus_t_spread = "True";
     @FXML
     private ComboBox<String> RulerDataType;
-    private static String ruler_data_type = "Нет";
+    private static String ruler_data_type = "0";
     @FXML
     private ComboBox<String> TicksStyle;
-    private static String ticks_style = "Точки и линии";
+    private static String ticks_style = "DotsLines";
     @FXML
     private ComboBox<String> ClusterStyleText;
-    private static String cluster_style_text = "Сумма покупок и продаж";
+    private static String cluster_style_text = "Summ";
     @FXML
     private ComboBox<String> ClusterStyleColor;
-    private static String cluster_style_color = "Баланс темный";
+    private static String cluster_style_color = "BlackBalance";
     @FXML
     private ComboBox<String> TimeFrame;
-    private static String time_frame = "5m";
+    private static String time_frame = "5";
 
 
     @FXML
