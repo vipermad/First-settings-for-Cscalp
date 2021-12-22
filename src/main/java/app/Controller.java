@@ -211,7 +211,7 @@ public class Controller implements Initializable {
         Fifth_WorkAmount.setValueFactory(fifthWorkAmount);
         Fifth_WorkAmount.setEditable(true);
         Fifth_WorkAmount.valueProperty().addListener(
-                (observableValue, integer, t1) -> fourth_work_amount = Fifth_WorkAmount.getValue());
+                (observableValue, integer, t1) -> fifth_work_amount = Fifth_WorkAmount.getValue());
 
         SpinnerValueFactory<Integer> throwLimitTo = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 999999999);
         throwLimitTo.setValue(100);
