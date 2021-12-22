@@ -246,7 +246,7 @@ public class DataCrypto {
         "    <StopOrdersThrowRange Value=\"" + stop_limit_orders_throw_range + "\" />\n" +
         "    <IsServerStopOrders Value=\"" + is_server_stop_orders + "\" />\n" +
         "    <StopOrdersMethod_TPricesFTick Value=\"False\" />\n" +
-        "    <AveragingMethod Value=\"FIFO\" />\n" +
+        "    <AveragingMethod Value=\"" + averaging_method + "\" />\n" +
         "    <PlaySoundOnTrade Value=\"" + play_sound_on_trade + "\" />\n" +
         "    <ShowProfitType Value=\"" + show_profit_type + "\" />\n" +
         "  </TRADING>\n" +
